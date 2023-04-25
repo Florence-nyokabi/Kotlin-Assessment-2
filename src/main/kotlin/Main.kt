@@ -1,5 +1,10 @@
 fun main() {
-    var myString = randomString("Florence")
+    // Invoking checkString()
+    println(checkStrings("Florence"))
+
+
+    // Invoking checkPasswords
+    checkPassword("call7sally")
 
 
     // Invoking multiples()
@@ -25,9 +30,11 @@ fun main() {
 following values: first character, last character, length of the string and
 whether it begins with a vowel or not.
  */
-//data class randomString(var str: String)
+
 fun checkStrings(str: String): Boolean{
     if (str[0] == 'a' || str[0] == 'e' || str[0] == 'i' || str[0] == 'o' || str[0] == 'u'){
+        println(str[0])
+        println(str[-1])
         return true
     }
     return false
@@ -44,12 +51,13 @@ be valid it must meet the following conditions:
 Your function should determine whether the password provided is valid or not.
 The function returns true/false
  */
-fun checkPassword(password: Any): Boolean{
-    for(char in chars){
-            if (char 8.. 16){
-
-        }
+fun checkPassword(passwords: String):Boolean{
+    while( passwords.length>= 8 && passwords.length<= 16 && passwords != "password" && (passwords.contains("0") || passwords.contains("1")
+                || passwords.contains("3") || passwords.contains("4") || passwords.contains("5") || passwords.contains("6") ||
+                passwords.contains("7")) || passwords.contains("8") || passwords.contains("9")) {
+        return true
     }
+    return false
 }
 
 /*
