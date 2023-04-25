@@ -35,6 +35,7 @@ fun checkStrings(str: String): Boolean{
     if (str[0] == 'a' || str[0] == 'e' || str[0] == 'i' || str[0] == 'o' || str[0] == 'u'){
         println(str[0])
         println(str[-1])
+        println(str.length)
         return true
     }
     return false
